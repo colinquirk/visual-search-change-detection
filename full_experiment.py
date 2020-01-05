@@ -37,6 +37,7 @@ cd_task = changedetection.Ktask(
         monitor_distance=90,
         data_directory=data_directory,
         instruct_text=cd_instructs,
+        max_per_quad=2,
         number_of_blocks=5,
         number_of_trials_per_block=80,
         sample_time=stim_time,
