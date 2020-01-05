@@ -78,7 +78,7 @@ def show_eyetracking_instructions(self):
     self.tracker.display_eyetracking_instructions()
 
 
-def calibrate_tracker(self, _):
+def calibrate_tracker(self, *args):
     self.tracker.setup_tracker()
 
 
