@@ -20,8 +20,7 @@ stim_time = 2
 cd_instructs = [
     ('Welcome to the experiment. Press space to continue.'),
     ('In this experiment you will be remembering colors.\n\n'
-     'Each trial will start with a fixation cross. '
-     'Then, 6 squares with different colors will appear. '
+     '6 squares with different colors will appear. '
      'Remember as many colors as you can.\n\n'
      'After a short delay, a square will reappear.\n\n'
      'If it has the SAME color, press the "S" key. '
