@@ -76,9 +76,6 @@ def setup_tracker(self):
 
 def show_eyetracking_instructions(self):
     self.tracker.display_eyetracking_instructions()
-
-
-def calibrate_tracker(self, *args):
     self.tracker.setup_tracker()
 
 
@@ -114,7 +111,6 @@ for task in tasks:
         task.run(
             setup_hook=setup_tracker,
             before_first_trial_hook=show_eyetracking_instructions,
-            pre_block_hook=calibrate_tracker,
             pre_trial_hook=pretrial_setup,
             post_trial_hook=end_trial,
             end_experiment_hook=kill_tracker,
