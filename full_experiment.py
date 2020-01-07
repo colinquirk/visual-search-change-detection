@@ -62,7 +62,7 @@ tl_task = visualsearch.TLTask(
 
 
 # Hooks
-def setup_tracker(self):
+def init_tracker(self):
     self.tracker = eyelinker.EyeLinker(
         self.experiment_window,
         self.experiment_name.split('_')[1] + self.experiment_info['Subject Number'] + '.edf',
@@ -109,7 +109,7 @@ random.shuffle(tasks)
 for task in tasks:
     try:
         task.run(
-            setup_hook=setup_tracker,
+            setup_hook=init_tracker,
             before_first_trial_hook=show_eyetracking_instructions,
             pre_trial_hook=pretrial_setup,
             post_trial_hook=end_trial,
