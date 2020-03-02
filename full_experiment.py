@@ -106,7 +106,7 @@ def kill_tracker(self):
 tasks = [cd_task, tl_task]
 random.shuffle(tasks)
 
-for task in tasks:
+for i, task in enumerate(tasks):
     try:
         task.run(
             setup_hook=init_tracker,
@@ -115,6 +115,9 @@ for task in tasks:
             post_trial_hook=end_trial,
             end_experiment_hook=kill_tracker,
         )
+    except SystemExit as e:
+        if i == len(tasks) - 1:
+            raise e
     except Exception as e:
         kill_tracker(task)
         raise e
